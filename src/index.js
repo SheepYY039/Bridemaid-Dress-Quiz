@@ -44,7 +44,7 @@ ReactDOM.render(
   <Router>
     {/* TODO: 404 for Admin panel */}
     <Switch>
-      <Route exact path="/AdminPanelTest/" component={AdminPanel} />
+      <Route exact path="/AdminPanel/" component={AdminPanel} />
       <Route
         path="/"
         component={() => (
