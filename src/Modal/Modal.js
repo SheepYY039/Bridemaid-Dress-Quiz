@@ -78,10 +78,14 @@ const SubmitModal = ({
   const separator = `\n`;
 
   const handleEmailOnClick = () => {
-    window.top.location = encodeURI(
-      `mailto:?subject=My Project Bride Bridesmaid Dress Quiz Results&body=${body}`,
-    );
-  };
+    console.log(body);
+    window.top.location =
+      'mailto:?subject=' +
+      encodeURIComponent('My Project Bride Bridesmaid Dress Quiz Results') +
+      '&body=' +
+      body;
+    // encodeURIComponent(body);
+  };;
   return (
     <Modal
       open={open}
@@ -163,6 +167,7 @@ const SubmitModal = ({
                 </Grid>
                 <Grid item xs={1}>
                   <EmailShareButton
+                    target="_blank"
                     url="https://www.myprojectbride.com"
                     onClick={() => handleEmailOnClick()}
                   >

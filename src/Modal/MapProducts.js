@@ -55,11 +55,12 @@ const MapProducts = ({
         Object.values(optionName).map(
           (optionTag) =>
             optionTag.optionId === optionId &&
-            (tempOptions += `\n\t\u2022 ${optionTag.name}`),
+            (tempOptions += `%0D%0A%20%20%20%20\u2022 ${optionTag.name}`),
         );
         return tempOptions;
       });
-      body += `\n\u2022 ${products[product].name}${options}\n\tMore Details: ${url}\n`;
+      const productUrl = encodeURIComponent(url);
+      body += `%0D%0A\u2022 ${products[product].name}${options}%0D%0A%20%20%20%20More Details: ${productUrl}%0D%0A`;
     });
     setBody(body);
   };
