@@ -2,8 +2,8 @@
   "name": "functions",
   "description": "API Functions for Firebase",
   "scripts": {
-    "start": "node index.js",
-    "dev": "GCP_PROJECT=quiz-myprojectbride nodemon index.js"
+    "start": "node api.js",
+    "dev": "GCP_PROJECT=quiz-myprojectbride nodemon api.js"
   },
   "engines": {
     "node": "^14.17.0 || ^16.13.0"
