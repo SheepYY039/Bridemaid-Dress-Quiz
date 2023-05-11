@@ -6,7 +6,7 @@
     "dev": "GCP_PROJECT=quiz-myprojectbride nodemon index.js"
   },
   "engines": {
-    "node": "12"
+    "node": "^14.17.0 || ^16.13.0"
   },
   "dependencies": {
     "@google-cloud/storage": "^5.7.4",

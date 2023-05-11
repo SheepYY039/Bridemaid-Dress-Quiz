@@ -1,5 +1,7 @@
 # Bridesmaid Dress Quiz for My Project Bride
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5fff9ba7-cd69-4ceb-b73e-2ba6a967a162/deploy-status)](https://app.netlify.com/sites/myprojectbride-quiz/deploys)
+
 This quiz is created using react and firebase for [my project bride](https://www.myprojectbride.com/). The quiz be be [here](https://www.myprojectbride.com/index.php?route=information/information&information_id=9) on the website.  
 
 ## Built With
