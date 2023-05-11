@@ -1,5 +1,7 @@
 const admin = require('firebase-admin');
 const app = require('express')();
+const serverless = require('serverless-http');
+const bodyParser = require('body-parser');
 
 const v1Router = require("./v1/routes/routes");
 
@@ -12,7 +14,7 @@ admin.initializeApp({
   databaseURL: "https://quiz-myprojectbride.firebaseio.com"
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1337;
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -25,6 +27,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(bodyParser.json());
+
 app.listen(PORT, () => {
   console.log(`API is listening on port ${PORT}`);
 });
+
+module.exports.handler = serverless(app);
