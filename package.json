@@ -50,8 +50,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api-start": "node DatabaseFunctions/functions/api.js",
-    "api-dev": "GCP_PROJECT=quiz-myprojectbride nodemon DatabaseFunctions/functions/api.js"
+    "api-start": "node netlify/functions/api.js",
+    "api-dev": "GCP_PROJECT=quiz-myprojectbride nodemon netlify/functions/api.js"
   },
   "browserslist": {
     "production": [
