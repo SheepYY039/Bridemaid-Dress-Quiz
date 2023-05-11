@@ -4,6 +4,13 @@ const cors = require('cors')({ origin: true });
 
 const router = express.Router();
 
+const serviceAccount = require("../../secrets/quiz-myprojectbride-firebase-adminsdk-ehkb3-35095ef0d2.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://quiz-myprojectbride.firebaseio.com",
+}, "admin-api");
+
 
 // get all categories
 router.get('/categories', (req, res) => {
