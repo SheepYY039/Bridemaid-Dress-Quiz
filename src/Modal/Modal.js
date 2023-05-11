@@ -36,7 +36,7 @@ const SubmitModal = ({
   setStarted,
 }) => {
   axios.defaults.baseURL =
-    'https://asia-east2-quiz-myprojectbride.cloudfunctions.net/api';
+    'https://myprojectbride-quiz.netlify.app/.netlify/functions/api';
 
   const [open, setOpen] = useState(false);
   const [body, setBody] = useState(`My Results:\n`);
