@@ -2,7 +2,7 @@
 import React from 'react';
 import { Login, LoginForm } from 'react-admin';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from 'firebase/compat';
+import firebase from 'firebase';
 // import * as firebaseAuth from 'firebase/compat/auth';
 // import ForgotPasswordButton from "./CustomForgotPassword";
 
