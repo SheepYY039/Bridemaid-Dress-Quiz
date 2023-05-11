@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 
 const v1Router = require("./v1/routes/routes");
 
-app.use("/api/v1", v1Router);
 
 const serviceAccount = require("./secrets/quiz-myprojectbride-firebase-adminsdk-ehkb3-35095ef0d2.json");
 
@@ -29,8 +28,11 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-  console.log(`API is listening on port ${PORT}`);
-});
+app.use("/.netlify/functions/api/v1", v1Router);
+// app.listen(PORT, () => {
+//   console.log(`API is listening on port ${PORT}`);
+// });
+
+module.exports = app;
 
 module.exports.handler = serverless(app);

@@ -78,5 +78,5 @@
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   },
-  "proxy": "https://asia-east2-quiz-myprojectbride.cloudfunctions.net/api"
+  "proxy": "https://myprojectbride-quiz.netlify.app/.netlify/functions/api"
 }

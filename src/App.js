@@ -84,7 +84,7 @@ const App = () => {
     contentStyle = { width: '100%', height: '92%' };
   }
   axios.defaults.baseURL =
-    'https://asia-east2-quiz-myprojectbride.cloudfunctions.net/api';
+    'https://myprojectbride-quiz.netlify.app/.netlify/functions/api';
   useEffect(() => {
     setIsLoading(true);
 
