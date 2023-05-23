@@ -224,3 +224,4 @@ sketch
 # Local Netlify folder
 .netlify/
 hookVar.js
+build
