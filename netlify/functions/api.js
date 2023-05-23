@@ -1,9 +1,13 @@
 const admin = require('firebase-admin');
+require('dotenv').config()
+
+
 
 const serviceAccount = {
   "type": "service_account",
   "project_id": "quiz-myprojectbride",
   "private_key_id": process.env.GOOGLE_CLOUD_PRIVATE_KEY_ID,
+  // TODO: Take private key from environment variable not working 
   "private_key": process.env.GOOGLE_CLOUD_PRIVATE_KEY,
   "client_email": "firebase-adminsdk-ehkb3@quiz-myprojectbride.iam.gserviceaccount.com",
   "client_id": "105042583064944336174",
@@ -27,6 +31,7 @@ const bodyParser = require('body-parser');
 const express = require("express");
 const cors = require('cors')({ origin: true });
 
+
 const router = express.Router();
 
 // const v1Router = require("./v1/routes/routes");
@@ -45,9 +50,6 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-
-
-
 
 // get all categories
 router.get('/categories', (req, res) => {
@@ -239,10 +241,25 @@ router.get('/productImages', (req, res) => {
 
 
 app.use("/.netlify/functions/api", router);
+// app.use("/api/", router);
 // app.listen(PORT, () => {
 //   console.log(`API is listening on port ${PORT}`);
 // });
 
+
+// export async function handler
+
 module.exports = app;
 
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
+module.exports.handler = function (event, context) {
+  // const api = express();
+  // const router = Router();
+  // router.get('/hello', (req, res) => res.send('Hello World!'));
+  // app.use('/api/', router);
+
+  // app.use("/.netlify/functions/api", router);
+  // app.use("", router);
+
+  return serverless(app)(event, context);
+}

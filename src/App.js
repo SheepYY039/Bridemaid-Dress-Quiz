@@ -84,7 +84,7 @@ const App = () => {
     contentStyle = { width: '100%', height: '92%' };
   }
   axios.defaults.baseURL =
-    'https://myprojectbride-quiz.netlify.app/.netlify/functions/api';
+    process.env.NODE_ENV === 'development' ? 'http://localhost:8888/.netlify/functions/api' : 'https://myprojectbride-quiz.netlify.app/.netlify/functions/api';
   useEffect(() => {
     setIsLoading(true);
 

@@ -9,7 +9,6 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 
 import posed from 'react-pose';
-import { log } from 'firebase-functions/lib/logger';
 
 const Question = ({
   options,
@@ -133,7 +132,8 @@ const Question = ({
                           alt={`${options[option].name}`}
                         />
                       </div>
-                    )},
+                    )
+                  },
                 )}
               </Card>
             </ToggleButton>
@@ -146,7 +146,7 @@ const Question = ({
           container
           className="choiceGrid"
           component={MyToggleButtonGroup}
-          // style={{ overflowY: "scroll" }}
+        // style={{ overflowY: "scroll" }}
         >
           {Object.keys(options).map((option) => (
             <ToggleButton
