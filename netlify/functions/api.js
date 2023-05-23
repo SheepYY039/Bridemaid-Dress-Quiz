@@ -3,8 +3,8 @@ const admin = require('firebase-admin');
 const serviceAccount = {
   "type": "service_account",
   "project_id": "quiz-myprojectbride",
-  "private_key_id": "395c26f1d0421754296099e0a05b7e79047befc8",
-  "private_key": process.env.PRIVATE_KEY,
+  "private_key_id": process.env.GOOGLE_CLOUD_PRIVATE_KEY_ID,
+  "private_key": process.env.GOOGLE_CLOUD_PRIVATE_KEY,
   "client_email": "firebase-adminsdk-ehkb3@quiz-myprojectbride.iam.gserviceaccount.com",
   "client_id": "105042583064944336174",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",

@@ -3,7 +3,7 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyBsGkiousZK5huGrq3mlR_qVo1ybj_wjUA',
+  apiKey: process.env.GOOGLE_API_KEY,
   authDomain: 'guan-ke-shi-jian-biao.firebaseapp.com',
   databaseURL: 'https://guan-ke-shi-jian-biao-default-rtdb.firebaseio.com',
   projectId: 'guan-ke-shi-jian-biao',

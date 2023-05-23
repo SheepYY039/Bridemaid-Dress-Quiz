@@ -1,5 +1,5 @@
 module.exports = {
-  apiKey: 'AIzaSyAXEwySGfU4V69OAa8VPuh__i_BxHwUemY',
+  apiKey: process.env.GOOGLE_API_KEY,
   authDomain: 'quiz-myprojectbride.firebaseapp.com',
   databaseURL: 'https://quiz-myprojectbride.firebaseio.com',
   projectId: 'quiz-myprojectbride',
